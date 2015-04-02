@@ -375,6 +375,9 @@ inline void Voice::UpdateDestinations() {
     }
     modulation_destinations_[MOD_DST_TRIGGER_ENV_1] = 255;
   } else {
+    if (modulation_destinations_[MOD_DST_TRIGGER_ENV_1]) {
+      envelope_[0].Trigger(RELEASE);
+    }
     modulation_destinations_[MOD_DST_TRIGGER_ENV_1] = 0;
   }
 
@@ -384,6 +387,9 @@ inline void Voice::UpdateDestinations() {
     }
     modulation_destinations_[MOD_DST_TRIGGER_ENV_2] = 255;
   } else {
+    if (modulation_destinations_[MOD_DST_TRIGGER_ENV_2]) {
+      envelope_[1].Trigger(RELEASE);
+    }
     modulation_destinations_[MOD_DST_TRIGGER_ENV_2] = 0;
   }
   
