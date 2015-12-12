@@ -314,7 +314,7 @@ compare
 ----
 
 v
-mutable    v1.02
+mutable 1.02TRIG
 instruments \x06\x07-1
 shruthi classic
 (4 knobs)
