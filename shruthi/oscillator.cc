@@ -310,7 +310,7 @@ void Oscillator::RenderFm(uint8_t* buffer) {
     phase_2 += increment;
     uint8_t modulator = InterpolateSample(wav_res_sine,
         phase_2);
-    uint16_t modulation = modulator * parameter_;
+    uint16_t modulation = modulator * parameter_ * 4;
     *buffer++ = InterpolateSample(wav_res_sine,
         phase.integral + modulation);
   END_SAMPLE_LOOP
